@@ -1,0 +1,10 @@
+
+task myTask {
+    // 自定义myProperty属性
+    ext.myProperty = "myValue"
+}
+
+task printTaskProperties << {
+    // 输出属性值
+    println myTask.myProperty
+}

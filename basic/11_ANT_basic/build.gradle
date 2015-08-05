@@ -1,0 +1,14 @@
+
+task loadfile << {
+    // 列出directory目录下的文件或文件夹
+    def files = file('./directory').listFiles().sort()
+    // 输出每个文件对应的信息
+    files.each { File file ->
+        if (file.isFile()) {
+            ant.loadfile(srcFile: file, property: file.name)
+            println " *** $file.name ***"
+            println "${ant.properties[file.name]}"
+        }
+    }
+}
+

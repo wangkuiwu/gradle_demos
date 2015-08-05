@@ -1,0 +1,9 @@
+
+task hello << {
+    println 'Hello world!'
+}
+
+hello.doLast {
+    // name是任务自带的属性
+    println "Greetings from the $hello.name task."
+}
