@@ -1,0 +1,27 @@
+apply plugin: 'java'
+
+
+// 编译java源码时使用的JDK版本号(默认是当前JVM版本)
+sourceCompatibility = 1.7
+// Java version to generate classes for(默认和sourceCompatibility相同)
+targetCompatibility = 1.7
+
+// 指定group(发布时有用)
+group = 'com.skw.hello'
+// 生成的lib或zip包的名称(默认是工程名)
+archivesBaseName = 'HelloLib'
+// 指定版本号
+version = '0.0.1'
+
+sourceSets {
+    main {
+        // 指定"源码路径"在src目录下
+        java {
+            srcDir 'src'
+        }
+        // 指定"资源路径"在resources目录下
+        resources {
+            srcDir 'resources'
+        }
+    }
+}

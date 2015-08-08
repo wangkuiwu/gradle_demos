@@ -1,0 +1,11 @@
+apply plugin: 'java'
+
+// maven仓库
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // 测试依赖于maven仓库中的junit包
+    testCompile 'junit:junit:4.+'
+}

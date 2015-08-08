@@ -11,7 +11,7 @@
 
     $ gradle build
 
-说明：`gradle build`则会执行生成compileJava, jar, assemble, test等人物。
+说明：`gradle build`则会执行生成compileJava, jar, assemble, test等任务。
 
 ## 2. 运行HelloWorld
 
