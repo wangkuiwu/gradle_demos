@@ -1,0 +1,5 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+// 指定main
+mainClassName = "com.skw.hello.HelloWorld"

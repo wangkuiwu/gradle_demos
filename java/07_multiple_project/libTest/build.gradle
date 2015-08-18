@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'application'
 
 // maven仓库
 repositories {
@@ -14,9 +15,14 @@ sourceSets {
 }
 
 dependencies {
-    // 依赖于本地libs目录下的jar包
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':lib')
+
     // 测试依赖于maven仓库中的junit包
     testCompile 'junit:junit:4.+'
 }
 
+// Redefine where .class files are written
+sourceSets.main.output.classesDir = file("classes")
+ 
+// Specify main class to be executed
+mainClassName = "com.skw.test.Test"

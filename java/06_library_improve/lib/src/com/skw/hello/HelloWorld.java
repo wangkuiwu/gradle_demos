@@ -1,10 +1,10 @@
 package com.skw.hello;
 
 public class HelloWorld {
-    public static void main(String[] args) {
-        HelloWorld obj = new HelloWorld();
-        obj.plus(2, 4);
-    }
+    // public static void main(String[] args) {
+    //     HelloWorld obj = new HelloWorld();
+    //     obj.plus(2, 4);
+    // }
 
     public int plus(int a, int b) {
         int ret = a+b;
