@@ -7,6 +7,10 @@ task release(dependsOn: 'distribution') << {
     println 'We release now'
 }
 
+task debug(dependsOn: 'distribution') << {
+    println 'We debug now'
+}
+
 gradle.taskGraph.whenReady {taskGraph ->
     // 如果任务中含有release任务，则version=1.0；否则，version=1.0-SNAPSHOT
     if (taskGraph.hasTask(release)) {
